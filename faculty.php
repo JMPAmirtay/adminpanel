@@ -33,17 +33,10 @@
           $faculties = mysqli_fetch_all($faculties);
           foreach ($faculties as $faculty) {
         ?>
-          <button class="faculty-btn" onclick="loadDoc('agrobiology.php')"><?= $faculty[1]?></button>
+          <button class="faculty-btn" onclick="loadDoc('agrobiology.php?id=<?= $faculty[0]?>')"><?= $faculty[1]?></button>
         <?php
           }
          ?>
-<!--         <button class="faculty-btn" onclick="loadDoc('agrobiology.php')">Агробиология</button>
-        <button class="faculty-btn" onclick="window.location.href = 'engine.php';">Инженерно – технический</button>
-        <button class="faculty-btn" onclick="window.location.href = 'business.php';">Высшая школа «Бизнеса и права»</button>
-        <button class="faculty-btn" onclick="window.location.href = 'water_forest.php';">Водные, земельные и лесные ресурсы</button>
-        <button class="faculty-btn" onclick="window.location.href = 'soc_hum.php';">Cоциально-гуманитарный</button>
-        <button class="faculty-btn" onclick="window.location.href = 'veterinary.php';">Ветеринария</button>
-        <button class="faculty-btn" onclick="window.location.href = 'tech_bio.php';">Технология и биоресурсы</button> -->
       </div>
       <div id="demo"></div>
     </center>
